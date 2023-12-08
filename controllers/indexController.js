@@ -41,7 +41,6 @@ exports.hotelSignin = catchAsyncErrors(async (req, res, next) => {
 
 
 exports.hotelSignout = catchAsyncErrors(async (req, res, next) => {
-
     res.clearCookie("token")
     res.json({ message: 'successfully signout' })
 })
