@@ -1,5 +1,5 @@
 const express = require('express')
-const { homepage,hotelSignup,hotelSignin,hotelSignout,hotelUser} = require('../controllers/indexController')
+const { homepage,hotelSignup,hotelSignin,hotelSignout,hotelUser,sendmail} = require('../controllers/indexController')
 const { isAuthenticatedUser } = require('../middlewares/authenticated')
 const router = express.Router()
 
@@ -9,14 +9,19 @@ router.get('/',isAuthenticatedUser,homepage)
 
 //Authentication
 //Signup
-router.post('/hotel/signup',hotelSignup)
+router.post('/user/signup',hotelSignup)
 //SignIn
-router.post('/hotel/signin',hotelSignin)
+router.post('/user/signin',hotelSignin)
 
 //Authenticated routes
 //SignOut
-router.get('/hotel/signout',isAuthenticatedUser,hotelSignout)
+router.get('/user/signout',isAuthenticatedUser,hotelSignout)
 //Current User Details
-router.get('/hotel/user',isAuthenticatedUser,hotelUser)
+router.get('/user/getuser',isAuthenticatedUser,hotelUser)
+
+// send mail
+
+router.post('/user/sendmail',sendmail)
+
 
 module.exports = router
