@@ -1,5 +1,5 @@
 {
-  "name": "hotel-management-backend",
+  "name": "Optimanage website backend",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -22,5 +22,9 @@
     "mongoose": "^8.0.2",
     "morgan": "^1.10.0",
     "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }
