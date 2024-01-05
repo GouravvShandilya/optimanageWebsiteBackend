@@ -113,7 +113,7 @@ exports.sendmail = catchAsyncErrors(async (req, res, next) => {
 
     var mailOptions2 = {
         from: process.env.SMTP_MAIL,
-        to: "",
+        to: "sonuyadav@optimanage.co.in",
         subject: "New Inquiry Received: Action Required",
         html: `<h5>
         The customer has reached out to us seeking assistance and information regarding our services. As always, providing exceptional support to our clients is our top priority.<br><br>
