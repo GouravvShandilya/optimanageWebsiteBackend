@@ -8,7 +8,7 @@ const PORT = process.env.PORT
 
 
 app.use(cors({
-    origin:"https://optimanage.co.in/contactus",
+    origin:"https://optimanage.co.in",
     credentials:true
 }));
 
